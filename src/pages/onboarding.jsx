@@ -13,25 +13,29 @@ const Onboarding = () => {
   };
 
   const handleRoleSelection = async (role) => {
-    await user
-      .update({ unsafeMetadata: { role } })
-      .then(() => {
-        console.log(`Role updated to: ${role}`);
-        navigateUser(role);
-      })
-      .catch((err) => {
-        console.error("Error updating role:", err);
-      });
+    try {
+      await user.update({ unsafeMetadata: { role } });
+      console.log(`Role updated to: ${role}`);
+      navigateUser(role);
+    } catch (err) {
+      console.error("Error updating role:", err);
+      // Consider showing a user-friendly error message here
+    }
   };
 
   useEffect(() => {
-    if (user?.unsafeMetadata?.role) {
+    if (isLoaded && user?.unsafeMetadata?.role) {
       navigateUser(user.unsafeMetadata.role);
     }
-  }, [user]);
+  }, [user, isLoaded]);
 
   if (!isLoaded) {
     return <BarLoader className="mb-4" width={"100%"} color="#36d7b7" />;
+  }
+
+  if (!user) {
+    // Optionally handle the case when the user is not logged in
+    return <div>Please log in to continue.</div>;
   }
 
   return (
