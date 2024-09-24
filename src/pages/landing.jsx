@@ -9,19 +9,17 @@ import { Link } from "react-router-dom";
 import companies from "../data/companies.json";
 import Autoplay from "embla-carousel-autoplay";
 import Banner from "../assets/banner.jpeg";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import faqs from "../data/faq.json";
-import { useUser } from "@clerk/clerk-react"; // Assuming you're using Clerk for authentication
 
 const LandingPage = () => {
-  const { user } = useUser();
-  const role = user?.unsafeMetadata?.role; // Assuming role is stored in unsafeMetadata
+  
 
   return (
     <main className="mt-[3.5rem] flex flex-col gap-10 sm:gap-20 p-5 pl-2 max-w-7xl mx-auto">
@@ -48,14 +46,11 @@ const LandingPage = () => {
             </Button>
           </Link>
 
-          {/* Show "Post a Job" button to users who are not candidates */}
-          {role !== "candidate" && (
-            <Link to="/post-job">
-              <Button variant="red" size="xl">
-                Post a Job
-              </Button>
-            </Link>
-          )}
+          <Link to={"/post-job"}>
+            <Button variant="destructive" size="xl">
+              Post a Job
+            </Button>
+          </Link>
         </div>
       </div>
 
@@ -119,4 +114,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-  
