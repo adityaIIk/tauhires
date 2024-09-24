@@ -1,0 +1,50 @@
+[
+    {
+        "name":"apple",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/488px-Apple_logo_black.svg.png",
+        "id": 0
+    },
+    
+    {
+        "name":"intel",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/6/6a/Intel_logo_%282020%2C_dark_blue%29.svg",
+        "id": 1
+    },
+    
+    {
+        "name":"atlassian",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/4/4d/Atlassian-logo.svg",
+        "id": 2
+    },
+    
+    {
+        "name":"google",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png",
+        "id": 3
+    },
+
+    {
+        "name":"netflix",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+        "id": 4
+    },
+    
+    {
+        "name":"meta",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg",
+        "id": 5
+    },
+    
+    {
+        "name":"microsoft",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg",
+        "id": 6
+    },
+
+    {
+        "name":"Amazon",
+        "path":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Amazon_2024.svg/1920px-Amazon_2024.svg.png",
+        "id": 7
+    }
+       
+]

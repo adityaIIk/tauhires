@@ -1,0 +1,33 @@
+/* Grid background for light mode */
+.grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+    background-color: white; /* Full white background in light mode */
+    background: linear-gradient(
+        to right,
+        rgba(0.2, 0.2, 0.2, 0.2) 1px, /* Greyish grid lines for light mode */
+        transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(128, 128, 128, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Grid background for dark mode */
+.dark .grid-background {
+    background-color: black; /* Full black background in dark mode */
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.1) 1px, /* White grid lines for dark mode */
+        transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+
